@@ -33,7 +33,7 @@ const db = mysql.createPool({
 
 // HOME INICIAL (REGISTRO)
 app.get('/', (req, res) => {
-    res.render('registro', { message: '' });
+    res.send("FUNCIONOU ROOT");
 });
 
 // LOGIN PAGE
@@ -148,3 +148,4 @@ app.get('/logout', (req, res) => {
 app.listen(port, () => {
     console.log("Servidor rodando em http://localhost:" + port);
 });
+console.log(__dirname);
